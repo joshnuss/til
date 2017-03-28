@@ -62,6 +62,7 @@ hub browse
 Create an `index.html`, with:
 
 ```markdown
+{% raw %}
 ---
 layout: default
 title: Welcome!
@@ -69,10 +70,11 @@ title: Welcome!
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
+{% endraw %}
 ```
 
 ## Create a your first post
