@@ -96,10 +96,10 @@ it works!!!
 To run in development mode:
 
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl /til
 ```
 
-Navigate to [http://127.0.0.1:4000](http://127.0.0.1:4000)
+Navigate to [http://127.0.0.1:4000/til/](http://127.0.0.1:4000/til/)
 
 ## Deploy
 
