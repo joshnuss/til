@@ -5,7 +5,7 @@ title: Welcome!
 <ul>
   {% for post in site.posts %}
     <li>
-      #{{ forloop.index + 1 }}
+      #{{ forloop.index }}
       &nbsp;
       <a href="{{ post.url | prepend:site.baseurl}}">{{ post.title }}</a>
     </li>
