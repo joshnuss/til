@@ -33,8 +33,8 @@ If you want to find all files where the name matches a pattern, you can use the 
 ```bash
 # find all files that have the word "reservation"
 $ ag -g reservation
-app/models/<span style='color: purple; weight: bold'>reservation</span>.rb
-spec/models/<span style='color: purple; weight: bold'>reservation</span>_spec.rb
+app/models/reservation.rb
+spec/models/reservation_spec.rb
 ```
 
 # Match based on filename
