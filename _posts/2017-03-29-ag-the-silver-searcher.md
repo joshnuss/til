@@ -28,13 +28,13 @@ ag all-the-things -A 5 -B 5
 
 # Find filename by pattern
 
-If you want to find all files where the name matches a patter, you can use the `-g` option.
+If you want to find all files where the name matches a pattern, you can use the `-g` option.
 
 ```bash
-# find all files that have the word reservation
+# find all files that have the word "reservation"
 $ ag -g reservation
-app/models/reservation.rb
-spec/models/reservation_spec.rb
+app/models/<span style='color: purple; weight: bold'>reservation</span>.rb
+spec/models/<span style='color: purple; weight: bold'>reservation</span>_spec.rb
 ```
 
 # Match based on filename
@@ -42,7 +42,7 @@ spec/models/reservation_spec.rb
 If you wanted to find something in only certain types of files, you can use `-G`. It's similar to the lowercase `-g`, except it match inside the file and match the file name.
 
 ```bash
-# find instances of city where the filename contains the word model
+# find instances of "city" where the filename contains the word "model"
 $ ag city -G model
 app/models/hotel.rb
 22: city: "New York"
