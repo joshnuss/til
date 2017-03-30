@@ -6,31 +6,33 @@ tags: rails, vim
 
 # Experiments opening files in VIM
 
-When editing code, context switching happens when switching files. It's important to reduce friction here to maintain focus.
+When editing code, switching files causes context switching. Anything that reduces context switching will increase focus.
 
-You might be in some file and want to open the related test, or be looking at a Pull Request and want to open all it's files. It *should* be easy.
+For example, you might be in some file and want to go to the related test, or you may be looking at a Pull Request and want to open all it's related files. This *should* be easy.
 
-Lately I've been experimenting with different ways of accomplishing this, and starting building up shortcuts.
+Well now it is..
+
+Lately, I've been experimenting with different ways of accomplishing this, and starting building up shortcuts.
 
 Let me share them with you.
 
-# Tests
+## Open related test
 
-For alternating between files and tests, I use [rails.vim](https://github.com/tpope/vim-rails). It provides a helpful command `:A` to open alternate file. I map it to `,.`.
+For alternating between code and tests, I use [rails.vim](https://github.com/tpope/vim-rails). It provides a helpful command `:A` to open alternate file. I map it to `,.`.
 
 You can map it in your `.vimrc` with `noremap <Leader>. :A<CR>`
 
-# Chaining VIM
+## Chaining VIM
 
 Cool things happen when you chain `vim` together with other commands like `git`.
 
 A common pattern I use is `vim -O $(....)`, let me explain:
 
-- `vim` is the command, could be anything, i.e. `emacs`
-- `-O` opens a list of files in vertical split mode, i.e. `vim -O file1.txt file2.txt`
-- `$(...)` can be any command that returns a list of files. i.e. `vim -O $(find .)` opens all files in current dir
+  - `vim` is the command, could be anything, i.e. `emacs`
+  - `-O` opens a list of files in vertical split mode, i.e. `vim -O file1.txt file2.txt`
+  - `$(...)` can be any command that returns a list of files. i.e. `vim -O $(find .)` opens all files in current dir
 
-# Chaining VIM with GIT
+## Chaining VIM with GIT
 
 You can find the files you have uncommitted with `git ls-files -m`, so if you do `vim -O $(git ls-files -m)`, it will open all changed files in a split view.
 
