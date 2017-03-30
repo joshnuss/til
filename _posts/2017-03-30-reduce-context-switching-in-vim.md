@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Opening files experiements
+title: Reduce Context Switching in VIM
 tags: rails, vim
 ---
 
 # Reduce Context Switching in VIM
 
-When editing code, switching files causes context switching. Anything that reduces this will increase focus.
+When editing code, switching between files causes context switching. Anything that reduces this will increase focus.
 
 For example, you might be in some file and want to go to the related test, or you may be looking at a Pull Request and want to open all it's related files. You have to start thinking about what the file is called or where it might be. This *should* be easy.
 
