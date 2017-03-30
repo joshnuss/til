@@ -12,9 +12,7 @@ For example, you might be in some file and want to go to the related test, or yo
 
 Well now it is..
 
-Lately, I've been experimenting with different ways of accomplishing this, and starting building up shortcuts.
-
-Let me share them with you.
+I've been experimenting with different ways of accomplishing this, let me share them with you.
 
 ## Open related test
 
@@ -30,15 +28,15 @@ A common pattern I use is `vim -O $(....)`, let me explain:
 
   - `vim` is the command, could be anything, i.e. `emacs`
   - `-O` opens a list of files in vertical split mode, i.e. `vim -O file1.txt file2.txt`
-  - `$(...)` can be any command that returns a list of files. i.e. `vim -O $(find .)` opens all files in current dir
+  - `$(...)` can be any command that returns a list of files. i.e. `vim -O $(find .)` would open all files in current dir
 
 ## Chaining VIM with GIT
 
-You can find the files you have uncommitted with `git ls-files -m`, so if you do `vim -O $(git ls-files -m)`, it will open all changed files in a split view.
+You can find all your uncommitted changees with `git ls-files -m`. If you chain it with vim `vim -O $(git ls-files -m)`, you `alias` it and you'll be opening files in double-time.
 
-You can do the same for opening the last commit, or opening all files modified in this branch. See my aliases below.
+But wait... you can do the same for opening the last commit, or opening all files modified in this branch. Sky is the limit.
 
-## Aliases
+## Useful aliases
 
 Here are some aliases:
 
