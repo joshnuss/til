@@ -16,7 +16,7 @@ I've been experimenting with different ways of accomplishing this, let me share 
 
 ## Open related test
 
-For alternating between code and tests, I use [rails.vim](https://github.com/tpope/vim-rails). It provides a helpful command `:A` to open alternate file. I map it to `,.`.
+For alternating between code and tests, I use [rails.vim](https://github.com/tpope/vim-rails). It provides a helpful command `:A` to open alternate file, I map it to `,.`.
 
 You can map it in your `.vimrc` with `noremap <Leader>. :A<CR>`
 
@@ -24,11 +24,11 @@ You can map it in your `.vimrc` with `noremap <Leader>. :A<CR>`
 
 Cool things happen when you chain `vim` together with other commands like `git`.
 
-A common pattern I use is `vim -O $(....)`, let me explain:
+A common pattern is to use `vim -O $(a-command)`, let me explain:
 
   - `vim` is the command, could be anything, i.e. `emacs`
   - `-O` opens a list of files in vertical split mode, i.e. `vim -O file1.txt file2.txt`
-  - `$(...)` can be any command that returns a list of files. i.e. `vim -O $(find .)` would open all files in current dir
+  - `$(a-command)` can be any command that returns a list of files. `bash` will expand it as a giant string i.e. `vim -O $(find .)` would open all files in current dir
 
 ## Chaining VIM with GIT
 
