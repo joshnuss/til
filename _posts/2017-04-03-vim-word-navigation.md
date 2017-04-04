@@ -13,6 +13,6 @@ So changing a word becomes `ce` (**c**hange to the **e**nd of word), deleting a 
 Often I dont want to remove the whole word, just some boundary. For example if you have a long variable name like `some_long_ass_variable_name`, I'd like to remove the first portion.
 I can navigate to the underscore boundary with `t_` (**t**ill underscore). To delete until the underscore, I'd do `dt_`, but that would leave `_long_ass_variable_name`. To remove everything including the boundary, use `f` as in `df_`.
 
-## Bonus
+## Bonus: Last file's path
 
 The previously closed files path is aliases to `#`, just like to can do `:!echo %` to see the current file's path, you can do `:!echo #` to see the last opened files' path. To re-open last file, simple do `:edit #` or shorten to `:e#`.
